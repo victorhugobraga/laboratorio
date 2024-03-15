@@ -1,0 +1,166 @@
+:root {
+  --primary: #090969;
+  --secondary: #7056e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--secondary);
+  text-decoration: none;
+  font-family: "Baloo 2", sans-serif;
+}
+
+header .logo img {
+  width: 42px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 500ms;
+}
+
+header nav ul li a:hover {
+  color: var(--secondary);
+}
+
+h1 {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 3rem;
+}
+
+h1 .html {
+  color: #e44d26;
+}
+
+h1 .css {
+  color: #0076be;
+}
+
+h2 {
+  color: var(--primary);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 2rem;
+}
+
+main {
+  margin-top: 90px;
+  font-family: "Roboto", sans-serif;
+  font-family: 1.5rem;
+  line-height: 1.4;
+}
+
+main #title img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+main abbr {
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  color: var(--primary);
+}
+
+section:not(#title) img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 20px 0;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 2.5rem auto;
+}
+
+#video-cta {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+#video-cta .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+#video-cta .container div {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.container a {
+  color: var(--secondary);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.container a:hover {
+  color: var(--primary);
+}
+
+footer {
+  box-sizing: border-box;
+  padding: 0.875rem;
+
+  background-color: var(--secondary);
+  color: #fff;
+
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bold;
+}
+
+footer .container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social-media {
+  display: flex;
+  gap: 16px;
+}
+
+footer .social-media svg {
+  width: 18px;
+}

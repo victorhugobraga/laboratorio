@@ -1,19 +1,19 @@
 const menu = [
     {
       id: 1,
-      title: "buttermilk pancakes",
-      category: "breakfast",
+      title: "Panquecas",
+      category: "manha",
       price: 15.99,
       img: "./images/item-1.jpeg",
-      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+      desc: `Panquecas de trigo integral, feitas com ovos orgânicos e xarope de bordo puro.`,
     },
     {
       id: 2,
-      title: "diner double",
-      category: "lunch",
+      title: "Combo ao Molho",
+      category: "almoço",
       price: 13.99,
       img: "./images/item-2.jpeg",
-      desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+      desc: `Combo de Hamburguer, batatas fritas e molho de salada.`,
     },
     {
       id: 3,
@@ -21,64 +21,64 @@ const menu = [
       category: "shakes",
       price: 6.99,
       img: "./images/item-3.jpeg",
-      desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+      desc: `Leite batido com chocolate, chantilly e cerejas no topo.`,
     },
     {
       id: 4,
-      title: "country delight",
-      category: "breakfast",
+      title: "Café da manhã country",
+      category: "manha",
       price: 20.99,
       img: "./images/item-4.jpeg",
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
+      desc: `Ovos fritos, bacon, torradas e suco de laranja fresco.`,
     },
     {
       id: 5,
       title: "egg attack",
-      category: "lunch",
+      category: "almoço",
       price: 22.99,
       img: "./images/item-5.jpeg",
       desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
     },
     {
       id: 6,
-      title: "oreo dream",
+      title: "Sonho Oreo",
       category: "shakes",
       price: 18.99,
       img: "./images/item-6.jpeg",
-      desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+      desc: `Delicioso shake de Oreo, com um toque de baunilha e coberto com chantilly.`,
     },
     {
       id: 7,
-      title: "bacon overflow",
-      category: "breakfast",
+      title: "Transbordamento de Bacon",
+      category: "manha",
       price: 8.99,
       img: "./images/item-7.jpeg",
-      desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+      desc: `Um café da manhã recheado com bacon crocante, ovos fritos e torradas quentinhas.`,
     },
     {
       id: 8,
-      title: "american classic",
-      category: "lunch",
+      title: "Clássico Americano",
+      category: "almoço",
       price: 12.99,
       img: "./images/item-8.jpeg",
-      desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+      desc: `Um hambúrguer clássico com queijo cheddar, alface, tomate e nosso molho especial.`,
     },
     {
       id: 9,
-      title: "quarantine buddy",
+      title: "Companheiro de Quarentena",
       category: "shakes",
       price: 16.99,
       img: "./images/item-9.jpeg",
-      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+      desc: `Um shake de chocolate com um toque de menta, perfeito para relaxar em casa.`,
     },
     {
       id: 10,
-      title: "bison steak",
-      category: "dinner",
+      title: "Bife de Bisão",
+      category: "jantar",
       price: 22.99,
       img: "./images/item-10.jpeg",
-      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
-    },
+      desc: `Um suculento bife de bisão, servido com batatas assadas e uma salada fresca.`,
+    }
   ];
   
   const sectionCenter = document.querySelector(".section-center");
@@ -97,7 +97,7 @@ const menu = [
             <div class="item-info">
               <header>
                 <h4>${item.title}</h4>
-                <h4 class="price">$${item.price}</h4>
+                <h4 class="price">${item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h4>
               </header>
               <p class="item-text">
                 ${item.desc}
@@ -117,7 +117,7 @@ const menu = [
         }
         return values;
       },
-      ["all"]
+      ["Todas"]
     );
     const categoryBtns = categories
       .map(function (category) {
@@ -139,7 +139,7 @@ const menu = [
             return menuItem;
           }
         });
-        if (category === "all") {
+        if (category === "Todas") {
           diplayMenuItems(menu);
         } else {
           diplayMenuItems(menuCategory);
